@@ -19,6 +19,8 @@ class ViewController: UIViewController, EPSignatureDelegate {
         let signatureVC = EPSignatureViewController(signatureDelegate: self, showsDate: true, showsSaveSignatureOption: true)
         signatureVC.subtitleText = "I agree to the terms and conditions"
         signatureVC.title = "John Doe"
+        signatureVC.alertTitle = "Error"
+        signatureVC.alertMessage = "No signed"
         let nav = UINavigationController(rootViewController: signatureVC)
         present(nav, animated: true, completion: nil)
     }

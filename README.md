@@ -54,6 +54,8 @@ Just drag and drop the files in `Pod/Classes` folder into your project
 let signatureVC = EPSignatureViewController(signatureDelegate: self, showsDate: true, showsSaveSignatureOption: true)
 signatureVC.subtitleText = "I agree to the terms and conditions"
 signatureVC.title = "John Doe"
+signatureVC.alertTitle = "Error"
+signatureVC.alertMessage = "No signed"
 let nav = UINavigationController(rootViewController: signatureVC)
 presentViewController(nav, animated: true, completion: nil)
 ```
